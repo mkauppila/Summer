@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 Markus Kauppila. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "GameViewController.h"
 #import "MyScene.h"
 
-@implementation ViewController
+@implementation GameViewController
 
 - (void)viewDidLoad
 {
