@@ -10,9 +10,6 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-
 @interface GameObject : NSObject
-
 @property (strong, nonatomic, readonly) SKSpriteNode *sprite;
-
 @end
