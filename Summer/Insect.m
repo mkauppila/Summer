@@ -10,4 +10,16 @@
 
 @implementation Insect
 
+- (instancetype)initWithColor:(SKColor *)color position:(CGPoint)position
+{
+	self = [super init];
+	if (self) {
+		const CGSize spriteSize = CGSizeMake(100.0f, 100.0f);
+		self.sprite = [SKSpriteNode spriteNodeWithColor:color size:spriteSize];
+		[self.sprite setPosition:position];
+	}
+	return self;
+}
+
+
 @end

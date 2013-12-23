@@ -11,5 +11,5 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface GameObject : NSObject
-@property (strong, nonatomic, readonly) SKSpriteNode *sprite;
+@property (strong, nonatomic) SKSpriteNode *sprite;
 @end

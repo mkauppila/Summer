@@ -8,6 +8,8 @@
 
 #import "GameObject.h"
 
-@interface Insect : GameObject
+#import <SpriteKit/SpriteKit.h>
 
+@interface Insect : GameObject
+- (instancetype)initWithColor:(SKColor *)color position:(CGPoint)position;
 @end
