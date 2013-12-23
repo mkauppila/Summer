@@ -24,6 +24,7 @@
 		2806A07218674C5800B755A4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2806A04D18674C5700B755A4 /* UIKit.framework */; };
 		2806A07A18674C5800B755A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2806A07818674C5800B755A4 /* InfoPlist.strings */; };
 		2806A07C18674C5800B755A4 /* SummerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2806A07B18674C5800B755A4 /* SummerTests.m */; };
+		2806A0871868BC1D00B755A4 /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2806A0861868BC1D00B755A4 /* GameObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		2806A07718674C5800B755A4 /* SummerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SummerTests-Info.plist"; sourceTree = "<group>"; };
 		2806A07918674C5800B755A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2806A07B18674C5800B755A4 /* SummerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SummerTests.m; sourceTree = "<group>"; };
+		2806A0851868BC1D00B755A4 /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
+		2806A0861868BC1D00B755A4 /* GameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +134,8 @@
 				2806A06618674C5800B755A4 /* Spaceship.png */,
 				2806A06818674C5800B755A4 /* Images.xcassets */,
 				2806A05218674C5700B755A4 /* Supporting Files */,
+				2806A0851868BC1D00B755A4 /* GameObject.h */,
+				2806A0861868BC1D00B755A4 /* GameObject.m */,
 			);
 			path = Summer;
 			sourceTree = "<group>";
@@ -262,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2806A0871868BC1D00B755A4 /* GameObject.m in Sources */,
 				2806A06518674C5800B755A4 /* MyScene.m in Sources */,
 				2806A06218674C5700B755A4 /* GameViewController.m in Sources */,
 				2806A05C18674C5700B755A4 /* AppDelegate.m in Sources */,
