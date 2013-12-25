@@ -29,28 +29,8 @@
 			Insect *insect = [self.insectSpawner spawn];
 			[self addChild:insect.sprite];
 		}
-		
-		/*
-        SKLabelNod
-		 e *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
-        
-        myLabel.text = @"Hello, World!";
-        myLabel.fontSize = 30;
-        myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
-                                       CGRectGetMidY(self.frame));
-        
-        [self addChild:myLabel];
-		
-		SKSpriteNode *test = [SKSpriteNode spriteNodeWithColor:[SKColor blueColor] size:CGSizeMake(10.0f, 20.0f)];
-		test.position = CGPointMake(100,100);
-		[self addChild:test];
-		*/
     }
     return self;
-}
-
-- (void)spawnInsect
-{
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
