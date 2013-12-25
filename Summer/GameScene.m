@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 Markus Kauppila. All rights reserved.
 //
 
-#import "MyScene.h"
+#import "GameScene.h"
 #import "Insect.h"
 
-@implementation MyScene
+@implementation GameScene
 
 -(id)initWithSize:(CGSize)size
 {
