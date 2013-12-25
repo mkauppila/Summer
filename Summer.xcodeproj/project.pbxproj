@@ -496,6 +496,7 @@
 				2806A08118674C5800B755A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2806A08218674C5800B755A4 /* Build configuration list for PBXNativeTarget "SummerTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +505,7 @@
 				2806A08418674C5800B755A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
