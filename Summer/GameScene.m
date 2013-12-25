@@ -59,6 +59,26 @@
 
 - (void)update:(CFTimeInterval)currentTime
 {
+	const CGPoint center = CGPointMake(self.size.width / 2.0f, self.size.height / 2.0f);
+	
+	[self.insects enumerateObjectsUsingBlock:^(Insect *insect, NSUInteger idx, BOOL *stop) {
+		NSLog(@"handling insect number: %d", idx);
+
+		CGPoint position = insect.sprite.position;
+		
+		CGPoint difference = CGPointMake(center.x - position.x,
+										 center.y - position.y);
+		CGFloat length = sqrtf(difference.x * difference.x + difference.y * difference.y);
+
+		difference.x = difference.x / length;
+		difference.y = difference.y / length;
+		
+		CGPoint newPosition = CGPointMake(position.x + difference.x,
+										  position.y + difference.y);
+		
+		insect.sprite.position = newPosition;
+		
+	}];
 }
 
 @end
