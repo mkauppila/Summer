@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface InsectSpawner : NSObject
+@class Insect;
 
+@interface InsectSpawner : NSObject
+- (Insect *)spawn;
 @end
