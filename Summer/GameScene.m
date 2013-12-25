@@ -13,6 +13,8 @@
 
 @interface GameScene ()
 @property (strong, nonatomic) InsectSpawner *insectSpawner;
+
+@property (strong, nonatomic) NSMutableArray *insects;
 @end
 
 @implementation GameScene
@@ -22,11 +24,14 @@
 	self = [super initWithSize:size];
     if (self) {
 		self.insectSpawner = insectSpawner;
-	
-	    self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
+		
+		self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
         
+		self.insects = [NSMutableArray new];
+		
 		for (int i = 0; i < 10; i++) {
 			Insect *insect = [self.insectSpawner spawn];
+			[self.insects addObject:insect];
 			[self addChild:insect.sprite];
 		}
     }
