@@ -26,6 +26,7 @@
 		2806A07C18674C5800B755A4 /* SummerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2806A07B18674C5800B755A4 /* SummerTests.m */; };
 		2806A0871868BC1D00B755A4 /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2806A0861868BC1D00B755A4 /* GameObject.m */; };
 		2806A08A1868BD9F00B755A4 /* Insect.m in Sources */ = {isa = PBXBuildFile; fileRef = 2806A0891868BD9F00B755A4 /* Insect.m */; };
+		2806A08D186AE50200B755A4 /* InsectSpawner.m in Sources */ = {isa = PBXBuildFile; fileRef = 2806A08C186AE50200B755A4 /* InsectSpawner.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		2806A0861868BC1D00B755A4 /* GameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
 		2806A0881868BD9F00B755A4 /* Insect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Insect.h; sourceTree = "<group>"; };
 		2806A0891868BD9F00B755A4 /* Insect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Insect.m; sourceTree = "<group>"; };
+		2806A08B186AE50200B755A4 /* InsectSpawner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsectSpawner.h; sourceTree = "<group>"; };
+		2806A08C186AE50200B755A4 /* InsectSpawner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsectSpawner.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +144,8 @@
 				2806A0861868BC1D00B755A4 /* GameObject.m */,
 				2806A0881868BD9F00B755A4 /* Insect.h */,
 				2806A0891868BD9F00B755A4 /* Insect.m */,
+				2806A08B186AE50200B755A4 /* InsectSpawner.h */,
+				2806A08C186AE50200B755A4 /* InsectSpawner.m */,
 			);
 			path = Summer;
 			sourceTree = "<group>";
@@ -277,6 +282,7 @@
 				2806A06218674C5700B755A4 /* GameViewController.m in Sources */,
 				2806A08A1868BD9F00B755A4 /* Insect.m in Sources */,
 				2806A05C18674C5700B755A4 /* AppDelegate.m in Sources */,
+				2806A08D186AE50200B755A4 /* InsectSpawner.m in Sources */,
 				2806A05818674C5700B755A4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
