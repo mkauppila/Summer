@@ -11,5 +11,8 @@
 @class Insect;
 
 @interface InsectSpawner : NSObject
+
+- (instancetype)initWithGameSceneSize:(CGSize)areaSize;
+
 - (Insect *)spawn;
 @end

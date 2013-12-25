@@ -10,16 +10,20 @@
 
 #import "Insect.h"
 
+const CGFloat spawnMargin = 50.0f;
+
 @interface InsectSpawner ()
 @property (assign, nonatomic) NSUInteger spawnCounter;
+@property (assign, nonatomic) CGSize gameAreaSize;
 @end
 
 @implementation InsectSpawner
 
-- (instancetype)init
+- (instancetype)initWithGameSceneSize:(CGSize)areaSize
 {
 	self = [super init];
 	if (self) {
+		self.gameAreaSize = areaSize;
 		self.spawnCounter = 0;
 	}
 	return self;
@@ -39,8 +43,8 @@
 {
 	bool spawnRight = self.spawnCounter % 2 == 0 ? YES : NO;
 	
-	CGFloat x = spawnRight ? 1200 : -100;
-	CGFloat y = random() % 768;
+	CGFloat x = spawnRight ? self.gameAreaSize.width + spawnMargin : -spawnMargin;;
+	CGFloat y = random() % (NSUInteger)self.gameAreaSize.height;
 	
 	return CGPointMake(x, y);
 }

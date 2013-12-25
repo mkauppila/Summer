@@ -23,8 +23,9 @@
     skView.showsNodeCount = YES;
     
     // Create and configure the scene.
-	InsectSpawner *spawner = [[InsectSpawner alloc] init];
-    SKScene * scene = [[GameScene alloc] initWithSize:skView.bounds.size
+	CGSize size = skView.bounds.size;
+	InsectSpawner *spawner = [[InsectSpawner alloc] initWithGameSceneSize:size];
+    SKScene * scene = [[GameScene alloc] initWithSize:size
 										insectSpawner:spawner];
     scene.scaleMode = SKSceneScaleModeAspectFill;
     
