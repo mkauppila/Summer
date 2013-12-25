@@ -7,16 +7,27 @@
 //
 
 #import "MyScene.h"
+#import "Insect.h"
 
 @implementation MyScene
 
--(id)initWithSize:(CGSize)size {    
-    if (self = [super initWithSize:size]) {
-        /* Setup your scene here */
-        
+-(id)initWithSize:(CGSize)size
+{
+	self = [super initWithSize:size];
+    if (self) {
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
         
-        SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+		for (int i = 0; i < 10; i++) {
+			CGPoint position = CGPointMake(random() % 1000, random() % 1000);
+			SKColor *color = i % 2 == 0 ? [SKColor blueColor] : [SKColor redColor];
+			Insect *insect = [[Insect alloc] initWithColor:color position:position];
+			
+			[self addChild:insect.sprite];
+		}
+ 		
+		/*
+        SKLabelNod
+		 e *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
         
         myLabel.text = @"Hello, World!";
         myLabel.fontSize = 30;
@@ -24,13 +35,23 @@
                                        CGRectGetMidY(self.frame));
         
         [self addChild:myLabel];
+		
+		SKSpriteNode *test = [SKSpriteNode spriteNodeWithColor:[SKColor blueColor] size:CGSizeMake(10.0f, 20.0f)];
+		test.position = CGPointMake(100,100);
+		[self addChild:test];
+		*/
     }
     return self;
 }
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    /* Called when a touch begins */
-    
+- (void)spawnInsect
+{
+	
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    /*
     for (UITouch *touch in touches) {
         CGPoint location = [touch locationInNode:self];
         
@@ -44,10 +65,11 @@
         
         [self addChild:sprite];
     }
+	*/
 }
 
--(void)update:(CFTimeInterval)currentTime {
-    /* Called before each frame is rendered */
+-(void)update:(CFTimeInterval)currentTime
+{
 }
 
 @end
