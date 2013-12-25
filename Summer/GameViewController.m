@@ -9,6 +9,8 @@
 #import "GameViewController.h"
 #import "GameScene.h"
 
+#import "InsectSpawner.h"
+
 @implementation GameViewController
 
 - (void)viewDidLoad
@@ -21,7 +23,9 @@
     skView.showsNodeCount = YES;
     
     // Create and configure the scene.
-    SKScene * scene = [GameScene sceneWithSize:skView.bounds.size];
+	InsectSpawner *spawner = [[InsectSpawner alloc] init];
+    SKScene * scene = [[GameScene alloc] initWithSize:skView.bounds.size
+										insectSpawner:spawner];
     scene.scaleMode = SKSceneScaleModeAspectFill;
     
     // Present the scene.

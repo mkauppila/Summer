@@ -7,14 +7,22 @@
 //
 
 #import "GameScene.h"
+
 #import "Insect.h"
+#import "InsectSpawner.h"
+
+@interface GameScene ()
+@property (strong, nonatomic) InsectSpawner *insectSpawner;
+@end
 
 @implementation GameScene
 
--(id)initWithSize:(CGSize)size
+- (id)initWithSize:(CGSize)size insectSpawner:(InsectSpawner *)insectSpawner;
 {
 	self = [super initWithSize:size];
     if (self) {
+		self.insectSpawner = insectSpawner;
+		
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
         
 		for (int i = 0; i < 10; i++) {
@@ -49,7 +57,7 @@
 	
 }
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     /*
     for (UITouch *touch in touches) {
@@ -68,7 +76,7 @@
 	*/
 }
 
--(void)update:(CFTimeInterval)currentTime
+- (void)update:(CFTimeInterval)currentTime
 {
 }
 
