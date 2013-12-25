@@ -22,17 +22,14 @@
 	self = [super initWithSize:size];
     if (self) {
 		self.insectSpawner = insectSpawner;
-		
-        self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
+	
+	    self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
         
 		for (int i = 0; i < 10; i++) {
-			CGPoint position = CGPointMake(random() % 1000, random() % 1000);
-			SKColor *color = i % 2 == 0 ? [SKColor blueColor] : [SKColor redColor];
-			Insect *insect = [[Insect alloc] initWithColor:color position:position];
-			
+			Insect *insect = [self.insectSpawner spawn];
 			[self addChild:insect.sprite];
 		}
- 		
+		
 		/*
         SKLabelNod
 		 e *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
@@ -54,7 +51,6 @@
 
 - (void)spawnInsect
 {
-	
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
