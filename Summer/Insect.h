@@ -11,5 +11,9 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface Insect : GameObject
-- (instancetype)initWithColor:(SKColor *)color position:(CGPoint)position;
+- (instancetype)initWithColor:(SKColor *)color
+					 withSize:(CGSize)spriteSize
+				  andPosition:(CGPoint)position;
+
+- (void)setPosition:(CGPoint)position;
 @end
