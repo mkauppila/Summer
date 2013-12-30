@@ -64,20 +64,16 @@
 	[self.insects enumerateObjectsUsingBlock:^(Insect *insect, NSUInteger idx, BOOL *stop) {
 		NSLog(@"handling insect number: %d", idx);
 
-		CGPoint position = insect.sprite.position;
+		CGPoint position = [insect position];
 		
-		CGPoint difference = CGPointMake(center.x - position.x,
-										 center.y - position.y);
-		CGFloat length = sqrtf(difference.x * difference.x + difference.y * difference.y);
+		CGPoint difference = CGPointSubtract(center, position);
+		CGFloat length = CGPointLength(difference);
 
 		difference.x = difference.x / length;
 		difference.y = difference.y / length;
 		
-		CGPoint newPosition = CGPointMake(position.x + difference.x,
-										  position.y + difference.y);
-		
-		insect.sprite.position = newPosition;
-		
+		CGPoint newPosition = CGPointAdd(position, difference);
+		[insect setPosition:newPosition];
 	}];
 }
 

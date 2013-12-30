@@ -21,7 +21,7 @@
     SKView * skView = (SKView *)self.view;
     skView.showsFPS = YES;
     skView.showsNodeCount = YES;
-    
+	
     // Create and configure the scene.
 	CGSize size = skView.bounds.size;
 	InsectSpawner *spawner = [[InsectSpawner alloc] initWithGameSceneSize:size];
