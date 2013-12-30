@@ -65,14 +65,8 @@
 		NSLog(@"handling insect number: %d", idx);
 
 		CGPoint position = [insect position];
-		
-		CGPoint difference = CGPointSubtract(center, position);
-		CGFloat length = CGPointLength(difference);
-
-		difference.x = difference.x / length;
-		difference.y = difference.y / length;
-		
-		CGPoint newPosition = CGPointAdd(position, difference);
+		CGPoint direction = CGPointNormalize(CGPointSubtract(center, position));
+		CGPoint newPosition = CGPointAdd(position, direction);
 		[insect setPosition:newPosition];
 	}];
 }
