@@ -16,4 +16,5 @@
 				  andPosition:(CGPoint)position;
 
 - (void)setPosition:(CGPoint)position;
+- (CGPoint)position;
 @end

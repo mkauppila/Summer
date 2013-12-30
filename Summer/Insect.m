@@ -27,4 +27,9 @@
 	[self.sprite setPosition:position];
 }
 
+- (CGPoint)position
+{
+	return self.sprite.position;
+}
+
 @end
