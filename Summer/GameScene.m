@@ -15,6 +15,8 @@
 @property (strong, nonatomic) InsectSpawner *insectSpawner;
 
 @property (strong, nonatomic) NSMutableArray *insects;
+
+@property (assign, nonatomic) CGRect heartFrame;
 @end
 
 @implementation GameScene
@@ -24,6 +26,14 @@
 	self = [super initWithSize:size];
     if (self) {
 		self.insectSpawner = insectSpawner;
+		
+		const CGPoint center = CGPointMake(self.size.width / 2.0f, self.size.height / 2.0f);
+		const CGSize heartSize = CGSizeMake(92.0f, 92.0f);
+		self.heartFrame = CGRectMake(center.x - heartSize.width / 2.0f,
+									 center.y - heartSize.height /  2.0f,
+									 heartSize.width,
+									 heartSize.height);
+		NSLog(@"heart frame: %@", CGRectToString(self.heartFrame));
 		
 		self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
         
