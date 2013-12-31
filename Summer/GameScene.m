@@ -67,13 +67,18 @@
 
 - (void)update:(CFTimeInterval)currentTime
 {
-	const CGPoint center = CGPointMake(self.size.width / 2.0f, self.size.height / 2.0f);
+	const CGPoint center = CGPointMake(CGRectGetMidX(self.heartFrame),
+									   CGRectGetMidY(self.heartFrame));
 	
 	[self.insects enumerateObjectsUsingBlock:^(Insect *insect, NSUInteger idx, BOOL *stop) {
 		CGPoint position = [insect position];
 		CGPoint direction = CGPointNormalize(CGPointSubtract(center, position));
 		CGPoint newPosition = CGPointAdd(position, direction);
 		[insect setPosition:newPosition];
+		
+		if (CGRectContainsPoint(self.heartFrame, newPosition)) {
+			insect.sprite.color = [SKColor whiteColor];
+		}
 	}];
 }
 
