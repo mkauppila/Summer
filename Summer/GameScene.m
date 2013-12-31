@@ -28,14 +28,18 @@
 		self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
         
 		self.insects = [NSMutableArray new];
-		
 		for (int i = 0; i < 10; i++) {
-			Insect *insect = [self.insectSpawner spawn];
-			[self.insects addObject:insect];
-			[self addChild:insect.sprite];
+			[self spawnInsect];
 		}
     }
     return self;
+}
+
+- (void)spawnInsect
+{
+	Insect *insect = [self.insectSpawner spawn];
+	[self.insects addObject:insect];
+	[self addChild:insect.sprite];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
