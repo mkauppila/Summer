@@ -18,6 +18,7 @@
 	if (self) {
 		self.sprite = [SKSpriteNode spriteNodeWithColor:color size:spriteSize];
 		[self setPosition:position];
+		self.hasEaten = NO;
 	}
 	return self;
 }

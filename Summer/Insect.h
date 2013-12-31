@@ -11,6 +11,8 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface Insect : GameObject
+@property (assign, nonatomic) BOOL hasEaten; // defaults to: NO
+
 - (instancetype)initWithColor:(SKColor *)color
 					 withSize:(CGSize)spriteSize
 				  andPosition:(CGPoint)position;
