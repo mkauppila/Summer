@@ -44,21 +44,15 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    /*
-    for (UITouch *touch in touches) {
-        CGPoint location = [touch locationInNode:self];
-        
-        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
-        
-        sprite.position = location;
-        
-        SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
-        
-        [sprite runAction:[SKAction repeatActionForever:action]];
-        
-        [self addChild:sprite];
-    }
-	*/
+	for (UITouch *touch in touches) {
+		CGPoint touchPoint = [touch locationInNode:self];
+		
+		[self.insects enumerateObjectsUsingBlock:^(Insect *insect, NSUInteger idx, BOOL *stop) {
+			if (CGRectContainsPoint(insect.sprite.frame, touchPoint)) {
+				NSLog(@"touching a insect! Destroy it!!");
+			}
+		}];
+	}
 }
 
 - (void)update:(CFTimeInterval)currentTime
@@ -66,8 +60,6 @@
 	const CGPoint center = CGPointMake(self.size.width / 2.0f, self.size.height / 2.0f);
 	
 	[self.insects enumerateObjectsUsingBlock:^(Insect *insect, NSUInteger idx, BOOL *stop) {
-		NSLog(@"handling insect number: %d", idx);
-
 		CGPoint position = [insect position];
 		CGPoint direction = CGPointNormalize(CGPointSubtract(center, position));
 		CGPoint newPosition = CGPointAdd(position, direction);
