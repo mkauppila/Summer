@@ -77,7 +77,7 @@
 		[insect setPosition:newPosition];
 		
 		if (CGRectContainsPoint(self.heartFrame, newPosition)) {
-			insect.sprite.color = [SKColor whiteColor];
+			insect.sprite.color = [SKColor redColor];
 		}
 	}];
 }

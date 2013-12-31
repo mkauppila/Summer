@@ -34,7 +34,7 @@
 	const CGSize spriteSize = CGSizeMake(30.0f, 30.0f);
 	
 	CGPoint position = [self generateSpawnPositionForSize:spriteSize];
-	Insect *insect = [[Insect alloc] initWithColor:[SKColor purpleColor]
+	Insect *insect = [[Insect alloc] initWithColor:[SKColor whiteColor]
 										  withSize:spriteSize
 									   andPosition:position];
 	return insect;
