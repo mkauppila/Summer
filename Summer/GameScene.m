@@ -12,6 +12,7 @@
 #import "InsectSpawner.h"
 
 @interface GameScene ()
+
 @property (strong, nonatomic) InsectSpawner *insectSpawner;
 
 @property (strong, nonatomic) NSMutableArray *insects;
@@ -54,14 +55,22 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+	NSMutableArray *deadInsects = [NSMutableArray array];
+	
 	for (UITouch *touch in touches) {
 		CGPoint touchPoint = [touch locationInNode:self];
 		
 		[self.insects enumerateObjectsUsingBlock:^(Insect *insect, NSUInteger idx, BOOL *stop) {
 			if (CGRectContainsPoint(insect.sprite.frame, touchPoint)) {
 				NSLog(@"touching a insect! Destroy it!!");
+				[deadInsects addObject:insect];
 			}
 		}];
+	}
+	
+	for (Insect *corpse in deadInsects) {
+		[corpse.sprite removeFromParent];
+		[self.insects removeObject:corpse];
 	}
 }
 
