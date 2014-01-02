@@ -80,13 +80,21 @@
 									   CGRectGetMidY(self.heartFrame));
 	
 	[self.insects enumerateObjectsUsingBlock:^(Insect *insect, NSUInteger idx, BOOL *stop) {
-		CGPoint position = [insect position];
-		CGPoint direction = CGPointNormalize(CGPointSubtract(center, position));
-		CGPoint newPosition = CGPointAdd(position, direction);
-		[insect setPosition:newPosition];
-		
-		if (CGRectContainsPoint(self.heartFrame, newPosition)) {
-			insect.sprite.color = [SKColor redColor];
+		if ([insect hasEaten] == NO) {
+			CGPoint position = [insect position];
+			CGPoint direction = CGPointNormalize(CGPointSubtract(center, position));
+			CGPoint newPosition = CGPointAdd(position, direction);
+			[insect setPosition:newPosition];
+			
+			if (CGRectContainsPoint(self.heartFrame, newPosition)) {
+				insect.sprite.color = [SKColor redColor];
+				[insect setHasEaten:YES];
+			}
+		} else {
+			CGPoint position = [insect position];
+			CGPoint direction = CGPointMake(1.0f, 0.0f);
+			CGPoint newPosition = CGPointAdd(position, direction);
+			[insect setPosition:newPosition];
 		}
 	}];
 }
