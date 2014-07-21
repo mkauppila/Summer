@@ -11,5 +11,14 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface GameObject : NSObject
+
 @property (strong, nonatomic) SKSpriteNode *sprite;
+@property (nonatomic, assign) CGPoint position;
+
+@property (nonatomic, assign) NSInteger healthPoints;
+
+- (instancetype)initWithColor:(SKColor *)color
+                     withSize:(CGSize)spriteSize
+                  andPosition:(CGPoint)position;
+
 @end

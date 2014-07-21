@@ -13,10 +13,5 @@
 @interface Insect : GameObject
 
 @property (nonatomic, assign) BOOL hasEaten; // defaults to: NO
-@property (nonatomic, assign) CGPoint position;
-
-- (instancetype)initWithColor:(SKColor *)color
-					 withSize:(CGSize)spriteSize
-				  andPosition:(CGPoint)position;
 
 @end

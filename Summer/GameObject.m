@@ -9,4 +9,28 @@
 #import "GameObject.h"
 
 @implementation GameObject
+
+- (instancetype)initWithColor:(SKColor *)color
+                     withSize:(CGSize)spriteSize
+                  andPosition:(CGPoint)position
+{
+    self = [super init];
+    if (self) {
+        self.sprite = [SKSpriteNode spriteNodeWithColor:color size:spriteSize];
+        [self setPosition:position];
+    }
+    return self;
+}
+
+- (void)setPosition:(CGPoint)position;
+{
+    [self.sprite setPosition:position];
+}
+
+- (CGPoint)position
+{
+    return self.sprite.position;
+}
+
+
 @end

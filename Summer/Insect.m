@@ -14,23 +14,12 @@
 					 withSize:(CGSize)spriteSize
 				  andPosition:(CGPoint)position
 {
-	self = [super init];
-	if (self) {
-		self.sprite = [SKSpriteNode spriteNodeWithColor:color size:spriteSize];
-		[self setPosition:position];
-		self.hasEaten = NO;
-	}
+	self = [super initWithColor:color withSize:spriteSize andPosition:position];
+    if (!self) return nil;
+    
+    self.hasEaten = NO;
+    
 	return self;
-}
-
-- (void)setPosition:(CGPoint)position;
-{
-	[self.sprite setPosition:position];
-}
-
-- (CGPoint)position
-{
-	return self.sprite.position;
 }
 
 @end

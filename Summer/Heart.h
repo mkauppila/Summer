@@ -10,13 +10,4 @@
 
 @interface Heart : GameObject
 
-// TODO lift to super class
-@property (nonatomic, assign) CGPoint position;
-
-// TODO lift to super class
-- (instancetype)initWithColor:(SKColor *)color
-                     withSize:(CGSize)spriteSize
-                  andPosition:(CGPoint)position;
-
-
 @end
