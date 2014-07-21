@@ -141,14 +141,9 @@
 				2806A06118674C5700B755A4 /* GameViewController.m */,
 				2806A06318674C5700B755A4 /* GameScene.h */,
 				2806A06418674C5800B755A4 /* GameScene.m */,
+				4730BF02197DA38400D08675 /* Models */,
 				2806A06818674C5800B755A4 /* Images.xcassets */,
 				2806A05218674C5700B755A4 /* Supporting Files */,
-				2806A0851868BC1D00B755A4 /* GameObject.h */,
-				2806A0861868BC1D00B755A4 /* GameObject.m */,
-				2806A0881868BD9F00B755A4 /* Insect.h */,
-				2806A0891868BD9F00B755A4 /* Insect.m */,
-				2806A08B186AE50200B755A4 /* InsectSpawner.h */,
-				2806A08C186AE50200B755A4 /* InsectSpawner.m */,
 			);
 			path = Summer;
 			sourceTree = "<group>";
@@ -180,6 +175,19 @@
 				2806A07818674C5800B755A4 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4730BF02197DA38400D08675 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2806A0851868BC1D00B755A4 /* GameObject.h */,
+				2806A0861868BC1D00B755A4 /* GameObject.m */,
+				2806A0881868BD9F00B755A4 /* Insect.h */,
+				2806A0891868BD9F00B755A4 /* Insect.m */,
+				2806A08B186AE50200B755A4 /* InsectSpawner.h */,
+				2806A08C186AE50200B755A4 /* InsectSpawner.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
