@@ -10,5 +10,7 @@
 @class InsectSpawner;
 
 @interface GameScene : SKScene
-- (id)initWithSize:(CGSize)size insectSpawner:(InsectSpawner *)insectSpawner;
+
+- (instancetype)initWithSize:(CGSize)size insectSpawner:(InsectSpawner *)insectSpawner NS_DESIGNATED_INITIALIZER;
+
 @end

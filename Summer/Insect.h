@@ -11,12 +11,12 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface Insect : GameObject
-@property (assign, nonatomic) BOOL hasEaten; // defaults to: NO
+
+@property (nonatomic, assign) BOOL hasEaten; // defaults to: NO
+@property (nonatomic, assign) CGPoint position;
 
 - (instancetype)initWithColor:(SKColor *)color
 					 withSize:(CGSize)spriteSize
 				  andPosition:(CGPoint)position;
 
-- (void)setPosition:(CGPoint)position;
-- (CGPoint)position;
 @end

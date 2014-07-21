@@ -22,7 +22,7 @@
 
 @implementation GameScene
 
-- (id)initWithSize:(CGSize)size insectSpawner:(InsectSpawner *)insectSpawner;
+- (instancetype)initWithSize:(CGSize)size insectSpawner:(InsectSpawner *)insectSpawner;
 {
 	self = [super initWithSize:size];
     if (self) {
