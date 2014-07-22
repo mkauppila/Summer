@@ -63,8 +63,8 @@
 	bool spawnRight = self.spawnCounter % 2 == 0 ? YES : NO;
 	
 	const CGFloat spawnMargin = spriteSize.width + 1;
-	CGFloat x = spawnRight ? self.gameAreaSize.width + spawnMargin : -spawnMargin;;
-	CGFloat y = random() % (NSUInteger)self.gameAreaSize.height;
+	CGFloat x = spawnRight ? self.gameAreaSize.width + spawnMargin : -spawnMargin;
+	CGFloat y = arc4random() % (NSUInteger)self.gameAreaSize.height;
 	
 	return CGPointMake(x, y);
 }
