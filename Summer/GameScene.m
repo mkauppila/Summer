@@ -54,7 +54,7 @@
 
 - (void)spawnInsect
 {
-	Insect *insect = [self.insectSpawner spawn];
+	Insect *insect = [self.insectSpawner spawnBasicInsect];
 	[self.insects addObject:insect];
 	[self addChild:insect.sprite];
 }

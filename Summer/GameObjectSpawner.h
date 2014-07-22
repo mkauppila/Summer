@@ -14,6 +14,6 @@
 
 - (instancetype)initWithGameSceneSize:(CGSize)areaSize;
 
-- (Insect *)spawn;
+- (Insect *)spawnBasicInsect;
 
 @end

@@ -185,10 +185,10 @@
 			children = (
 				2806A0851868BC1D00B755A4 /* GameObject.h */,
 				2806A0861868BC1D00B755A4 /* GameObject.m */,
-				2806A0881868BD9F00B755A4 /* Insect.h */,
-				2806A0891868BD9F00B755A4 /* Insect.m */,
 				2806A08B186AE50200B755A4 /* GameObjectSpawner.h */,
 				2806A08C186AE50200B755A4 /* GameObjectSpawner.m */,
+				2806A0881868BD9F00B755A4 /* Insect.h */,
+				2806A0891868BD9F00B755A4 /* Insect.m */,
 				4730BF03197DA87200D08675 /* Heart.h */,
 				4730BF04197DA87200D08675 /* Heart.m */,
 			);

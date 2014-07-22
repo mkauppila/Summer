@@ -27,7 +27,7 @@
 	return self;
 }
 
-- (Insect *)spawn
+- (Insect *)spawnBasicInsect
 {
 	self.spawnCounter++;
 	
