@@ -16,9 +16,12 @@
 @property (nonatomic, assign) CGPoint position;
 
 @property (nonatomic, assign) NSInteger healthPoints;
+@property (nonatomic, readonly) BOOL isAlive;
 
 - (instancetype)initWithColor:(SKColor *)color
                      withSize:(CGSize)spriteSize
                   andPosition:(CGPoint)position;
+
+- (void)takeDamage;
 
 @end

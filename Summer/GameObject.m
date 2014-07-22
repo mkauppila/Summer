@@ -32,5 +32,15 @@
     return self.sprite.position;
 }
 
+- (BOOL)isAlive
+{
+    return self.healthPoints > 0;
+}
+
+- (void)takeDamage
+{
+}
+
+
 
 @end

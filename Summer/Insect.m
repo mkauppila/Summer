@@ -28,9 +28,5 @@
     self.healthPoints--;
 }
 
-- (BOOL)isAlive
-{
-    return self.healthPoints > 0;
-}
 
 @end
