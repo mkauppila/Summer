@@ -39,8 +39,7 @@
 
 - (void)takeDamage
 {
+    self.healthPoints--;
 }
-
-
 
 @end

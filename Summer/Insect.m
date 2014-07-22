@@ -23,10 +23,4 @@
 	return self;
 }
 
-- (void)takeDamage
-{
-    self.healthPoints--;
-}
-
-
 @end
