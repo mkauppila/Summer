@@ -13,5 +13,9 @@
 @interface Insect : GameObject
 
 @property (nonatomic, assign) BOOL hasEaten; // defaults to: NO
+@property (nonatomic, readonly) BOOL isAlive;
+
+- (void)takeDamage;
+
 
 @end

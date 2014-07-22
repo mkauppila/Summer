@@ -18,8 +18,19 @@
     if (!self) return nil;
     
     self.hasEaten = NO;
+    self.healthPoints = 1;
     
 	return self;
+}
+
+- (void)takeDamage
+{
+    self.healthPoints--;
+}
+
+- (BOOL)isAlive
+{
+    return self.healthPoints > 0;
 }
 
 @end

@@ -58,8 +58,10 @@
         
         [self.insects enumerateObjectsUsingBlock:^(Insect *insect, NSUInteger idx, BOOL *stop) {
             if (CGRectContainsPoint(insect.sprite.frame, touchPoint)) {
-                NSLog(@"touching a insect! Destroy it!!");
-                [deadInsects addObject:insect];
+                [insect takeDamage];
+                if ([insect isAlive] == NO) {
+                    [deadInsects addObject:insect];
+                }
             }
         }];
     }
