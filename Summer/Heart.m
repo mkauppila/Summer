@@ -10,4 +10,15 @@
 
 @implementation Heart
 
+- (instancetype)initWithColor:(UIColor *)color withSize:(CGSize)spriteSize andPosition:(CGPoint)position
+{
+    self = [super initWithColor:color withSize:spriteSize andPosition:position];
+    if (!self) return nil;
+    
+    self.healthPoints = 3;
+    
+    return self;
+}
+
+
 @end

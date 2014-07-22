@@ -85,6 +85,11 @@
 			[insect setPosition:newPosition];
 			
 			if (CGRectContainsPoint(self.heart.sprite.frame, newPosition)) {
+                [self.heart takeDamage];
+                if ([self.heart isAlive] == NO) {
+                    [self gameOver];
+                }
+                
 				insect.sprite.color = [SKColor redColor];
 				[insect setHasEaten:YES];
 			}
@@ -95,6 +100,15 @@
 			[insect setPosition:newPosition];
 		}
 	}];
+}
+
+- (void)gameOver
+{
+    for (Insect *insect in self.insects) {
+        [insect.sprite removeFromParent];
+    }
+    
+    [self.heart.sprite removeFromParent];
 }
 
 @end
