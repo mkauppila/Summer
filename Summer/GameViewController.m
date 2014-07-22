@@ -9,7 +9,7 @@
 #import "GameViewController.h"
 #import "GameScene.h"
 
-#import "InsectSpawner.h"
+#import "GameObjectSpawner.h"
 
 @implementation GameViewController
 
@@ -24,7 +24,7 @@
 	
     // Create and configure the scene.
 	CGSize size = skView.bounds.size;
-	InsectSpawner *spawner = [[InsectSpawner alloc] initWithGameSceneSize:size];
+	GameObjectSpawner *spawner = [[GameObjectSpawner alloc] initWithGameSceneSize:size];
     SKScene * scene = [[GameScene alloc] initWithSize:size
 										insectSpawner:spawner];
     scene.scaleMode = SKSceneScaleModeAspectFill;

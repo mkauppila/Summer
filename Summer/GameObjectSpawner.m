@@ -6,16 +6,16 @@
 //  Copyright (c) 2013 Markus Kauppila. All rights reserved.
 //
 
-#import "InsectSpawner.h"
+#import "GameObjectSpawner.h"
 
 #import "Insect.h"
 
-@interface InsectSpawner ()
+@interface GameObjectSpawner ()
 @property (assign, nonatomic) NSUInteger spawnCounter;
 @property (assign, nonatomic) CGSize gameAreaSize;
 @end
 
-@implementation InsectSpawner
+@implementation GameObjectSpawner
 
 - (instancetype)initWithGameSceneSize:(CGSize)areaSize
 {

@@ -10,11 +10,11 @@
 
 #import "Heart.h"
 #import "Insect.h"
-#import "InsectSpawner.h"
+#import "GameObjectSpawner.h"
 
 @interface GameScene ()
 
-@property (strong, nonatomic) InsectSpawner *insectSpawner;
+@property (strong, nonatomic) GameObjectSpawner *insectSpawner;
 @property (strong, nonatomic) NSMutableArray *insects;
 
 @property (strong, nonatomic) Heart *heart;
@@ -23,7 +23,7 @@
 
 @implementation GameScene
 
-- (instancetype)initWithSize:(CGSize)size insectSpawner:(InsectSpawner *)insectSpawner;
+- (instancetype)initWithSize:(CGSize)size insectSpawner:(GameObjectSpawner *)insectSpawner;
 {
 	self = [super initWithSize:size];
     if (self) {

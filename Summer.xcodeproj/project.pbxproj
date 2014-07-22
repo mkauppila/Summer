@@ -25,7 +25,7 @@
 		2806A07C18674C5800B755A4 /* SummerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2806A07B18674C5800B755A4 /* SummerTests.m */; };
 		2806A0871868BC1D00B755A4 /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2806A0861868BC1D00B755A4 /* GameObject.m */; };
 		2806A08A1868BD9F00B755A4 /* Insect.m in Sources */ = {isa = PBXBuildFile; fileRef = 2806A0891868BD9F00B755A4 /* Insect.m */; };
-		2806A08D186AE50200B755A4 /* InsectSpawner.m in Sources */ = {isa = PBXBuildFile; fileRef = 2806A08C186AE50200B755A4 /* InsectSpawner.m */; };
+		2806A08D186AE50200B755A4 /* GameObjectSpawner.m in Sources */ = {isa = PBXBuildFile; fileRef = 2806A08C186AE50200B755A4 /* GameObjectSpawner.m */; };
 		4730BF05197DA87200D08675 /* Heart.m in Sources */ = {isa = PBXBuildFile; fileRef = 4730BF04197DA87200D08675 /* Heart.m */; };
 		A549A6095B71495CB9B12B8B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B5614255F1C476EA83FDF1C /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -67,8 +67,8 @@
 		2806A0861868BC1D00B755A4 /* GameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
 		2806A0881868BD9F00B755A4 /* Insect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Insect.h; sourceTree = "<group>"; };
 		2806A0891868BD9F00B755A4 /* Insect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Insect.m; sourceTree = "<group>"; };
-		2806A08B186AE50200B755A4 /* InsectSpawner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsectSpawner.h; sourceTree = "<group>"; };
-		2806A08C186AE50200B755A4 /* InsectSpawner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsectSpawner.m; sourceTree = "<group>"; };
+		2806A08B186AE50200B755A4 /* GameObjectSpawner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObjectSpawner.h; sourceTree = "<group>"; };
+		2806A08C186AE50200B755A4 /* GameObjectSpawner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObjectSpawner.m; sourceTree = "<group>"; };
 		2B5614255F1C476EA83FDF1C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4730BF03197DA87200D08675 /* Heart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Heart.h; sourceTree = "<group>"; };
 		4730BF04197DA87200D08675 /* Heart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Heart.m; sourceTree = "<group>"; };
@@ -187,8 +187,8 @@
 				2806A0861868BC1D00B755A4 /* GameObject.m */,
 				2806A0881868BD9F00B755A4 /* Insect.h */,
 				2806A0891868BD9F00B755A4 /* Insect.m */,
-				2806A08B186AE50200B755A4 /* InsectSpawner.h */,
-				2806A08C186AE50200B755A4 /* InsectSpawner.m */,
+				2806A08B186AE50200B755A4 /* GameObjectSpawner.h */,
+				2806A08C186AE50200B755A4 /* GameObjectSpawner.m */,
 				4730BF03197DA87200D08675 /* Heart.h */,
 				4730BF04197DA87200D08675 /* Heart.m */,
 			);
@@ -330,7 +330,7 @@
 				2806A06218674C5700B755A4 /* GameViewController.m in Sources */,
 				2806A08A1868BD9F00B755A4 /* Insect.m in Sources */,
 				2806A05C18674C5700B755A4 /* AppDelegate.m in Sources */,
-				2806A08D186AE50200B755A4 /* InsectSpawner.m in Sources */,
+				2806A08D186AE50200B755A4 /* GameObjectSpawner.m in Sources */,
 				4730BF05197DA87200D08675 /* Heart.m in Sources */,
 				2806A05818674C5700B755A4 /* main.m in Sources */,
 			);

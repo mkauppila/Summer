@@ -10,9 +10,10 @@
 
 @class Insect;
 
-@interface InsectSpawner : NSObject
+@interface GameObjectSpawner : NSObject
 
 - (instancetype)initWithGameSceneSize:(CGSize)areaSize;
 
 - (Insect *)spawn;
+
 @end

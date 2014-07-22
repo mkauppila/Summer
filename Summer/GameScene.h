@@ -7,10 +7,10 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@class InsectSpawner;
+@class GameObjectSpawner;
 
 @interface GameScene : SKScene
 
-- (instancetype)initWithSize:(CGSize)size insectSpawner:(InsectSpawner *)insectSpawner NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithSize:(CGSize)size insectSpawner:(GameObjectSpawner *)insectSpawner NS_DESIGNATED_INITIALIZER;
 
 @end
