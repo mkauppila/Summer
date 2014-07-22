@@ -26,7 +26,7 @@
 	CGSize size = skView.bounds.size;
 	GameObjectSpawner *spawner = [[GameObjectSpawner alloc] initWithGameSceneSize:size];
     SKScene * scene = [[GameScene alloc] initWithSize:size
-										insectSpawner:spawner];
+										gameObjectSpawner:spawner];
     scene.scaleMode = SKSceneScaleModeAspectFill;
     
     // Present the scene.

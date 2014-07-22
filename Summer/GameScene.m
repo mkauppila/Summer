@@ -14,7 +14,7 @@
 
 @interface GameScene ()
 
-@property (strong, nonatomic) GameObjectSpawner *insectSpawner;
+@property (strong, nonatomic) GameObjectSpawner *spawner;
 @property (strong, nonatomic) NSMutableArray *insects;
 
 @property (strong, nonatomic) Heart *heart;
@@ -23,13 +23,13 @@
 
 @implementation GameScene
 
-- (instancetype)initWithSize:(CGSize)size insectSpawner:(GameObjectSpawner *)insectSpawner;
+- (instancetype)initWithSize:(CGSize)size gameObjectSpawner:(GameObjectSpawner *)gameObjectSpawner;
 {
 	self = [super initWithSize:size];
     if (self) {
-		self.insectSpawner = insectSpawner;
+		self.spawner = gameObjectSpawner;
 		
-        self.heart = [self.insectSpawner spawnBasicHeart];
+        self.heart = [self.spawner spawnBasicHeart];
         [self addChild:self.heart.sprite];
         
 		self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
@@ -44,7 +44,7 @@
 
 - (void)spawnInsect
 {
-	Insect *insect = [self.insectSpawner spawnBasicInsect];
+	Insect *insect = [self.spawner spawnBasicInsect];
 	[self.insects addObject:insect];
 	[self addChild:insect.sprite];
 }
