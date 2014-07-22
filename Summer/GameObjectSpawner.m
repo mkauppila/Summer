@@ -9,6 +9,7 @@
 #import "GameObjectSpawner.h"
 
 #import "Insect.h"
+#import "Heart.h"
 
 @interface GameObjectSpawner ()
 @property (assign, nonatomic) NSUInteger spawnCounter;
@@ -26,6 +27,28 @@
 	}
 	return self;
 }
+
+#pragma mark - Spawn heart
+
+- (Heart *)spawnBasicHeart
+{
+    const CGPoint center = CGPointMake(self.gameAreaSize.width / 2.0f,
+                                       self.gameAreaSize.height / 2.0f);
+    const CGSize heartSize = CGSizeMake(92.0f, 92.0f);
+    const CGRect heartFrame = CGRectMake(center.x - heartSize.width / 2.0f,
+                                         center.y - heartSize.height /  2.0f,
+                                         heartSize.width,
+                                         heartSize.height);
+    NSLog(@"heart frame: %@", CGRectToString(heartFrame));
+    
+    Heart *heart = [[Heart alloc] initWithColor:[SKColor redColor]
+                                       withSize:heartFrame.size
+                                    andPosition:heartFrame.origin];
+    return heart;
+}
+
+
+#pragma mark - Spawn insects
 
 - (Insect *)spawnBasicInsect
 {

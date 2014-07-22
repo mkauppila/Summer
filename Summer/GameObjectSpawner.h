@@ -9,11 +9,13 @@
 #import <Foundation/Foundation.h>
 
 @class Insect;
+@class Heart;
 
 @interface GameObjectSpawner : NSObject
 
 - (instancetype)initWithGameSceneSize:(CGSize)areaSize;
 
+- (Heart *)spawnBasicHeart;
 - (Insect *)spawnBasicInsect;
 
 @end
